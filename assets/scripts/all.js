@@ -11,7 +11,7 @@
     let     introText = d.querySelector('.hero-text h1 .med-text'),
             counter = 0,
             stickyMenuOffset = 0,
-            inst = setInterval(generateWords, 4000);
+            inst = setInterval(generateWords, 1800);
 
     function generateWords() {
         introText.innerHTML = words[counter];

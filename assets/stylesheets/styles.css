@@ -113,7 +113,7 @@ p {
 }
 
 .background {
-  background: url("/assets/images/hero_bg.jpg") repeat;
+  background: repeat;
   position: relative;
 }
 .background:after {
@@ -161,6 +161,14 @@ p {
 }
 .sm-icon i.fa-stack-1x {
   color: #2E3192;
+}
+
+.no-webp .background {
+  background-image: url("/assets/images/hero_bg.jpg");
+}
+
+.webp .background {
+  background-image: url("/assets/images/hero_bg.jpg.webp");
 }
 
 header .nav-bar {
@@ -384,8 +392,8 @@ footer .footer-main--right ul li:last-of-type {
   width: 0;
   height: 3px;
   margin: 5px 0 0;
-  transition: all .4s linear;
-  transition-duration: 0.75s;
+  transition: all .1s linear;
+  transition-duration: 0.55s;
   opacity: 0;
   background-color: #f2f2f2;
 }
@@ -465,6 +473,7 @@ a::selection {
 .container--inner {
   float: left;
   padding: 40px 0;
+  width: 100%;
 }
 
 .row {
@@ -486,6 +495,7 @@ section:nth-child(even) {
 }
 
 .about-img {
+  display: block;
   left: 50%;
   max-width: 278px;
   position: relative;
@@ -534,7 +544,7 @@ section:nth-child(even) {
   justify-items: center;
   margin: 30px 0;
 }
-@media (min-width: 768px) {
+@media (min-width: 576px) {
   .grid {
     grid-template-columns: repeat(2, 1fr);
     grid-column-gap: 20px;
@@ -547,9 +557,18 @@ section:nth-child(even) {
     grid-row-gap: 20px;
   }
 }
+.grid-item {
+  padding: 15px 0;
+}
+@media (min-width: 768px) {
+  .grid-item {
+    padding: 0;
+  }
+}
 .grid-item img {
   -webkit-filter: grayscale(100%);
           filter: grayscale(100%);
+  max-width: 250px;
   opacity: .7;
   width: 100%;
   transition: all .5s ease;
@@ -567,55 +586,5 @@ section:nth-child(even) {
 .grid-item img:hover {
   -webkit-filter: none;
           filter: none;
-  opacity: 1;
-}
-
-/* ================================
-   Grid Overlay
-   ================================ */
-.grid-overlay {
-  width: 100%;
-  min-height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-  z-index: 1000;
-  display: none;
-}
-.grid-overlay.visible {
-  display: block;
-}
-.grid-overlay .row {
-  margin-left: -20px;
-  margin-right: -20px;
-  width: calc(100% + 40px);
-  min-height: 100vh;
-}
-.grid-overlay .grid-element {
-  width: calc(8.33333% - 21.66667px);
-  float: left;
-  margin-left: 20px;
-  background: rgba(0, 0, 255, 0.125);
-  min-height: 100vh;
-}
-
-.grid-trigger {
-  position: fixed;
-  bottom: 1.5em;
-  right: 2em;
-  z-index: 1001;
-  text-transform: uppercase;
-  display: inline-block;
-  padding: 8px 16px;
-  line-height: 1.125;
-  font-weight: normal;
-  background-color: blue !important;
-  border: 0;
-  border-radius: 8px;
-  margin-bottom: 0;
-  color: #fff;
-  opacity: 0.5;
-}
-.grid-trigger.activate {
   opacity: 1;
 }
