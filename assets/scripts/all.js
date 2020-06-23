@@ -22,11 +22,11 @@
     }
 
     function getOffset() {
-        return hero.offsetHeight;
+        return stickyMenu.offsetHeight;
     }
 
     // Smooth scroll to element on page when nav item is clicked
-    scrollToElement = function(e) {
+    /*scrollToElement = function(e) {
         e.preventDefault();
         let scrollTarget, scrollElement;
 
@@ -38,7 +38,7 @@
 
         scrollElement = d.getElementById(scrollTarget.replace('#', ''))
         scrollElement.scrollIntoView({behavior: "smooth"});
-    }
+    }*/
 
     d.addEventListener('DOMContentLoaded', generateWords);
 
@@ -70,7 +70,7 @@
         }
     }
 
-    d.querySelector('.view-next-section a').addEventListener('click', scrollToElement, false);
+    //d.querySelector('.view-next-section a').addEventListener('click', scrollToElement, false);
 
     // Show grid overlay when GRID button is clicked
     gridTrigger.addEventListener('click', function(e) {

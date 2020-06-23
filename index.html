@@ -104,8 +104,8 @@
                         <p>I am a senior-level front-end developer with extensive experience developing for various industries, including higher education, nonprofits, services, and retail. I am an advocate for inclusiveness and accessibility throughout the web, and develop with the mindset that the internet is for everyone. I enjoy working on the subtle nuances that elevate a good website to a great website.</p>
                     </div>
                     <div class="btn-container">
-                        <a href="/" class="btn">Download My Resume</a>
-                        <a href="https://linkedin.com/in/melissapiper" class="sm-icon" aria-label="LinkedIn">
+                        <a href="/assets/files/melissapiperresume.pdf" class="btn">Download My Resume</a>
+                        <a href="https://linkedin.com/in/melissapiper" class="sm-icon" aria-label="LinkedIn" target="_blank">
                             <span class="fa-stack">
                                 <i class="fa fa-square fa-stack-2x"></i>
                                 <i class="fa fa-linkedin-square fa-stack-1x" aria-hidden="true"></i>
@@ -183,7 +183,22 @@
         <section id="contact">
             <div class="container">
                 <h2>&#60; Contact &#47;&#62;</h2>
-                
+                <p>Please use the form below to contact me with any general questions or work inquiries.</p>
+                <form name="contact" action="https://formspree.io/xdowdbbv" method="POST">
+                    <label>
+                        Name: 
+                        <input type="text" name="name" required>
+                    </label>
+                    <label>
+                        Email:
+                        <input type="text" name="_replyto" required>
+                    </label>
+                    <label>
+                        Message:
+                        <textarea name="message"></textarea>
+                    </label>
+                    <button type="submit" class="btn">Send <i class="fa fa-paper-plane" aria-hidden="true"></i></button>
+                </form>
             </div>
         </section>
 

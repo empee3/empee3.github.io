@@ -1,5 +1,6 @@
 html {
   font-size: 100%;
+  scroll-behavior: smooth;
 }
 
 body {
@@ -81,14 +82,19 @@ h2 {
 p {
   color: #525255;
   font-family: "Open Sans", sans-serif;
-  font-size: 1.125rem;
+  font-size: 1rem;
   font-weight: 400;
-  line-height: 2rem;
+  line-height: 1.8;
+}
+@media (min-width: 768px) {
+  p {
+    font-size: 1.125rem;
+  }
 }
 
 @media (min-width: 768px) {
   .sticky {
-    box-shadow: 0px 0px 6px 0.5px rgba(0, 0, 0, 0.7);
+    box-shadow: 0px 0px 3px 0.5px rgba(0, 0, 0, 0.7);
     position: fixed !important;
     transition: all 1s ease;
   }
@@ -115,6 +121,11 @@ p {
 .background {
   background: repeat;
   position: relative;
+}
+@media (min-width: 768px) {
+  .background {
+    background-attachment: fixed;
+  }
 }
 .background:after {
   background: rgba(0, 127, 243, 0.5);
@@ -162,6 +173,9 @@ p {
 .sm-icon i.fa-stack-1x {
   color: #2E3192;
 }
+.sm-icon:hover i.fa-stack-1x {
+  color: #22246b;
+}
 
 .no-webp .background {
   background-image: url("/assets/images/hero_bg.jpg");
@@ -176,40 +190,45 @@ header .nav-bar {
   padding: 20px 0;
   position: relative;
   z-index: 99;
-  margin-left: -20px;
-  margin-right: -20px;
-  width: calc(100% + 40px);
 }
 @media (min-width: 768px) {
   header .nav-bar {
+    margin-left: -20px;
+    margin-right: -20px;
+    width: calc(100% + 40px);
     background: rgba(87, 157, 221, 0.3);
     left: 0;
     max-height: 100px;
-    position: absolute;
+    position: fixed;
     top: 0;
     z-index: 99;
+    transition: max-height .5s linear;
   }
   header .nav-bar.sticky {
     background: #579ddd;
     max-height: 50px;
+    transition: max-height .5s linear;
   }
 }
 header .header-logo {
   width: calc(66.66667% - 33.33333px);
   float: left;
   margin-left: 20px;
+  margin-left: 0;
 }
 @media (min-width: 768px) {
   header .header-logo {
     width: calc(33.33333% - 26.66667px);
     float: left;
     margin-left: 20px;
+    transition: width .5s linear;
   }
 }
 header .sticky .header-logo {
   width: calc(25% - 25px);
   float: left;
   margin-left: 20px;
+  transition: width .5s linear;
 }
 @media (min-width: 576px) {
   header .hero {
@@ -293,6 +312,34 @@ header .hero .view-next-section--label {
   }
 }
 
+form {
+  padding-top: 30px;
+}
+form label {
+  display: block;
+  font-weight: 600;
+}
+form input,
+form textarea {
+  border: 1px solid gray;
+  box-sizing: border-box;
+  border-radius: 5px;
+  font-weight: 400;
+  margin: 8px 0 20px 0;
+  padding: 12px 8px;
+  width: 100%;
+}
+form input:focus,
+form textarea:focus {
+  background-color: #ede6e6;
+}
+form textarea {
+  height: 100px;
+}
+form button {
+  border: none;
+}
+
 footer {
   padding: 40px 0;
 }
@@ -366,6 +413,7 @@ footer .footer-main--right ul li:last-of-type {
     float: left;
     margin-left: 20px;
     margin-left: calc(16.66667% - 23.33333px + 40px);
+    transition: margin .5s linear;
   }
 }
 .main-nav ul {
@@ -409,10 +457,11 @@ footer .footer-main--right ul li:last-of-type {
 }
 
 .sticky .main-nav {
-  width: calc(58.33333% - 31.66667px);
+  width: calc(50% - 30px);
   float: left;
   margin-left: 20px;
-  margin-left: calc(16.66667% - 23.33333px + 40px);
+  margin-left: calc(25% - 25px + 40px);
+  transition: margin .5s linear;
 }
 .sticky .main-nav ul {
   margin: 10px;
@@ -488,10 +537,20 @@ a::selection {
 }
 
 section {
+  scroll-margin-top: 50px;
   padding: 50px 0;
 }
 section:nth-child(even) {
   background: #CCE6FD;
+}
+
+p a {
+  color: #007FF3;
+  font-weight: 700;
+  text-decoration: none;
+}
+p a:hover {
+  text-decoration: underline;
 }
 
 .about-img {
@@ -535,6 +594,14 @@ section:nth-child(even) {
   }
   .about .sm-icon i {
     font-size: 4rem;
+  }
+}
+.about .about-content {
+  padding-top: 25px;
+}
+@media (min-width: 768px) {
+  .about .about-content {
+    padding-top: 0;
   }
 }
 
