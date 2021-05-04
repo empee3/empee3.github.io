@@ -25,21 +25,6 @@
         return stickyMenu.offsetHeight;
     }
 
-    // Smooth scroll to element on page when nav item is clicked
-    /*scrollToElement = function(e) {
-        e.preventDefault();
-        let scrollTarget, scrollElement;
-
-        if (e.target.parentNode.getAttribute('href')) {
-            scrollTarget = e.target.parentNode.getAttribute('href');
-        } else {
-            scrollTarget = e.target.getAttribute('href');
-        }
-
-        scrollElement = d.getElementById(scrollTarget.replace('#', ''))
-        scrollElement.scrollIntoView({behavior: "smooth"});
-    }*/
-
     d.addEventListener('DOMContentLoaded', generateWords);
 
     // Add event listener to make sidebar menu sticky, if menu exists
@@ -64,18 +49,20 @@
     }
 
     // Add smooth scrolling to main nav links
-    if (navLinks) {
+    /*if (navLinks) {
         for (i=0; i<navLinks.length; i++) {
             navLinks[i].addEventListener('click', scrollToElement, false);
         }
-    }
+    }*/
 
     //d.querySelector('.view-next-section a').addEventListener('click', scrollToElement, false);
 
-    // Show grid overlay when GRID button is clicked
-    gridTrigger.addEventListener('click', function(e) {
-        console.log('test');
-        gridTrigger.classList.toggle('activate');
-        gridOverlay.classList.toggle('visible');
-    });
+    if (document.querySelector('.featured-work')) {    
+        var mixer = mixitup('.featured-work', {
+            selectors: {
+                target: '.featured-item'
+            }
+        });
+    }
+
 })();
