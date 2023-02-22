@@ -5,8 +5,8 @@
             stickyMenu = d.getElementById('nav-bar');
             hero = d.querySelector('.hero'),
             navLinks = d.querySelectorAll('#main-nav a'),
-            words = ["HTML", "CSS", "JavaScript", "PHP", "WordPress", "Drupal", "React",
-                     "Sketch", "Photoshop"];
+            words = ["HTML", "CSS", "Sass", "JavaScript", "PHP", "WordPress", "Drupal", "React",
+                     "Sketch", "Figma"];
 
     let     introText = d.querySelector('.hero-text h1 .med-text'),
             counter = 0,
