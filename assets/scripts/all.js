@@ -48,15 +48,6 @@
         });
     }
 
-    // Add smooth scrolling to main nav links
-    /*if (navLinks) {
-        for (i=0; i<navLinks.length; i++) {
-            navLinks[i].addEventListener('click', scrollToElement, false);
-        }
-    }*/
-
-    //d.querySelector('.view-next-section a').addEventListener('click', scrollToElement, false);
-
     if (document.querySelector('.featured-work')) {    
         var mixer = mixitup('.featured-work', {
             selectors: {
