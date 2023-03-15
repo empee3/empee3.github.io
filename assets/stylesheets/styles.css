@@ -209,6 +209,10 @@ header {
   background: #000;
 }
 
+header p {
+  color: #ffffff;
+}
+
 header .nav-bar {
   background: #579ddd;
   padding: 20px 0;
@@ -639,12 +643,8 @@ p a:hover {
 
 .about-img {
   display: block;
-  left: 50%;
   max-width: 278px;
   position: relative;
-  shape-outside: circle(50%);
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
   width: 100%;
 }
 @media (min-width: 768px) {
@@ -1650,4 +1650,29 @@ body.compensate-for-scrollbar {
   .fancybox-thumbs__list a {
     max-width: calc(100% - 10px);
   }
+}
+
+.social-network-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  list-style: none;
+  padding: 50px 0;
+}
+
+.social-network-grid a,
+.social-network-grid a:visited {
+  color: #0054a3;
+  text-align: center;
+  text-decoration: none;
+}
+
+.social-network-grid a span {
+  display: block;
+  font-weight: bold;
+  padding: 10px 0;
+}
+
+.social-network-grid a:hover span {
+  text-decoration: underline;
 }
