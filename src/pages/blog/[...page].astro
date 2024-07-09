@@ -1,0 +1,43 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import HorizontalCard from "../../components/HorizontalCard.astro";
+import { getCollection } from "astro:content";
+import createSlug from "../../lib/createSlug";
+
+export async function getStaticPaths({ paginate }) {
+  const posts = await getCollection("blog");
+  posts.sort((a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf());
+  return paginate(posts, { pageSize: 10 });
+}
+
+const { page } = Astro.props;
+---
+
+<BaseLayout title="Blog" sideBarActiveItemID="blog">
+  <div class="mb-5">
+    <h1 class="text-3xl w-full font-bold">Blog</h1>
+  </div>
+
+  <div>
+    <HorizontalCard 
+      title="A Guide to Accessibility Resources for Global Accessibility Awareness Day"
+      img="/blogs/thumb_ally.webp"
+      url="https://www.viget.com/articles/global-accessibility-awareness-day/"
+      tags={['a11y']}
+    />
+    <div class="divider my-0" />
+    <HorizontalCard 
+      title="A Case for CSS Columns vs. CSS Grid with Tailwind"
+      img="/blogs/thumb_css.webp"
+      url="https://www.viget.com/articles/a-case-for-css-columns-vs-css-grid-with-tailwind/"
+      tags={['CSS','UI']}
+    />
+    <div class="divider my-0" />
+    <HorizontalCard 
+      title="Overcoming Anxiety in Code Reviews"
+      img="/blogs/thumb_anxiety.webp"
+      url="https://www.viget.com/articles/overcoming-anxiety-in-code-reviews/"
+      tags={['General']}
+    />
+  </div>
+</BaseLayout>
