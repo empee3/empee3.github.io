@@ -5,7 +5,9 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://empee3.github.io',
+  build: {
+    site: 'https://empee3.github.io',
+  },
   output: 'static',
   integrations: [mdx(), sitemap(), tailwind()]
 });
