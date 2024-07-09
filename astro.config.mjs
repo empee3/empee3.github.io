@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 
 // https://astro.build/config
 export default defineConfig({
-  site: 'https://empee3.github.io',
+  site: 'https://melissapiper.com',
   output: 'static',
   integrations: [mdx(), sitemap(), tailwind()]
 });
