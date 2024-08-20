@@ -8,14 +8,25 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     <h1 class="text-3xl w-full font-bold mb-5">Projects</h1>
   </div>
 
-  <p>For all projects, I was responsible for the UI and front-end (HTML/CSS/JavaScript), unless indicated.</p>
+  <p>
+    For all projects, I was responsible for the UI and front-end
+    (HTML/CSS/JavaScript), unless indicated.
+  </p>
 
   <HorizontalCard
     title="International Association of Fire Fighters (IAFF)"
     img="/projects/project_iaff.png"
     desc="IAFF.org is the main source for information on services, events, training, leadership resources, and news for more than 350,000 firefighters across the United States and Canada. In 2024, their main website was redesigned and upgraded, and I was responsible for building the front-end and UI components in WordPress."
     url="https://www.iaff.org/"
-    tags={['WordPress','Tailwind']}
+    tags={["WordPress", "Tailwind"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="Kellner's Fireworks"
+    img="/projects/thumb-kellners.png"
+    desc="A local fireworks retailer was looking to re-do their outdated website. Their new website was built using Drupal. I was responsible for the UI and front-end interactvity, as well as integrating the design with Drupal."
+    url="https://www.kellfire.com/"
+    tags={["Drupal"]}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -23,7 +34,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/projects/thumb-mspm.jpeg"
     desc="This standalone page was used to promote the MSPM degree program at CMU. The concept was to create an interactive rocket to demonstrate how potential students can 'launch' their careers with the MSPM program. Each section of the rocket can be expanded to read more about each step of the program, and includes launch buttons to jump to specific sections of the rocket."
     url="https://cmu-rocket-demo.netlify.app/"
-    tags={['Microsite']}
+    tags={["Microsite"]}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -31,7 +42,15 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/projects/thumb-florida-poly.jpg"
     desc="FPU wanted a microsite to promote their offerings to students interested in focused STEM courses. This site uses ScrollMagic and Greensock to create appealing animations and transitions to draw the visitor's attention and create unique interactions."
     url="https://conifer.rhizome.org/empee3/elliance-work/20200108143324/https://stempowered.floridapoly.edu/"
-    tags={['Microsite']}
+    tags={["Microsite"]}
+  />
+  <div class="divider my-0"></div>
+  <HorizontalCard
+    title="University of the Incarnate Word: Future Cards Microsite"
+    img="/projects/thumb-uiw.png"
+    desc="UIW wanted a way to draw more new students to the university, so my company designed and developed a microsite for them that highlights beautiful photography and engaging interactions. I was responsible for the development of the entire microsite. It utilizes ScrollMagic to create appealing animations and transitions."
+    url="https://futurecards.uiw.edu/"
+    tags={["Microsite"]}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -39,7 +58,7 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/projects/thumb-projects.jpg"
     desc="The agency that I worked with at the time was looking for a best-fit project management system that would allow account managers to efficiently enter tasks, but allow those tasks to be assigned later during our daily meetings. We decided to build our own system in Drupal 7 that would include a task management system, filtering, and a Kanban board. In addition to the UI, I also setup the Views and queries and Drupal to build all of the system's functionality."
     url="https://conifer.rhizome.org/empee3/default-collection/20170710151809/http://projects.beyondspotsanddots.com/projects"
-    tags={['Drupal']}
+    tags={["Drupal"]}
   />
   <div class="divider my-0"></div>
   <HorizontalCard
@@ -47,6 +66,6 @@ import HorizontalCard from "../components/HorizontalCard.astro";
     img="/projects/thumb-sous-vide.jpg"
     desc="The popular Sous-Vide cooking method had a magazine, and I worked in WordPress to build the design and functionality for the digital version."
     url="https://www.sousvidemagazine.com/"
-    tags={['WordPress']}
+    tags={["WordPress"]}
   />
 </BaseLayout>
